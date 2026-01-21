@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebGIS Fasilitas Kesehatan DIY</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-compass/dist/leaflet-compass.min.css" />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+
+      /* ===== JUDUL ===== */
+      #title {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #0d47a1;
+        color: white;
+        padding: 16px 50px;
+        border-radius: 12px;
+        z-index: 1000;
+        text-align: center;
+      }
+      #title h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      #title small {
+        font-size: 14px;
+      }
+
+      /* ===== LEGEND CONTROL ===== */
+      .leaflet-control-layers {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      /* ===== CUSTOM LEGEND ===== */
+      #custom-legend {
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+        background: #c8f4f7;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        padding: 20px 28px 20px 20px;
+        z-index: 1200;
+        min-width: 220px;
+      }
+      #custom-legend h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .legend-color {
+        width: 22px;
+        height: 22px;
+        border-radius: 6px;
+        margin-right: 10px;
+        border: 2px solid #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+      }
+      #reset-btn {
+        margin-top: 10px;
+        width: 100%;
+        background: #d6f8f9;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #0d47a1;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      #reset-btn:hover {
+        background: #b2ebf2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="title">
+      <h1>Sebaran Fasilitas Ibadah</h1>
+      <small>Kota Pekanbaru</small>
+      <div style="margin-top: 10px; font-size: 15px; background: #e3f2fd; padding: 10px 18px; border-radius: 8px; color: #222; max-width: 500px">
+        Peta ini menampilkan sebaran fasilitas ibadah (Masjid) di wilayah Kota Pekanbaru beserta batas administrasi kota. Klik marker untuk melihat nama dan alamat fasilitas.
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- Custom Legend -->
+    <div id="custom-legend">
+      <h3>LEGENDA PETA</h3>
+      <div class="legend-item" data-layer="pekanbaru"><span class="legend-color" style="background: #42a5f5"></span> <span class="legend-label">Kota Pekanbaru</span></div>
+      <button id="reset-btn">RESET PILIHAN</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-compass/dist/leaflet-compass.min.js"></script>
+    <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+
+    <script>
+      // ================= PETA =================
+      const map = L.map("map").setView([0.533333, 101.45], 12);
+
+      // Basemap
+      const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "Zakri Mafro – NIM 246111017",
+      }).addTo(map);
+
+      // Skala & Kompas
+      L.control.scale().addTo(map);
+      L.control.compass({ position: "topright" }).addTo(map);
+
+      // ================= WARNA =================
+      const warna = {
+        "Kota Pekanbaru": "#42a5f5"
+      };
+
+      // ================= LAYER SHP =================
+      const pekanbaru = L.layerGroup().addTo(map);
+
+      fetch("Kota Pekanbaru-KAB_KOTA.geojson")
+        .then((res) => res.json())
+        .then((data) => {
+          data.features.forEach((f, i) => {
+            const nama = f.properties.kab_kota || "Kota Pekanbaru";
+            if (!nama || !warna[nama]) {
+              console.warn(`Fitur ke-${i + 1} tidak memiliki nama_kab yang valid:`, f.properties);
+              return;
+            }
+            const layer = L.geoJSON(f, {
+              style: {
+                color: warna[nama],
+                weight: 4,
+                fillColor: warna[nama],
+                fillOpacity: 0.5,
+                dashArray: "6,4",
+              },
+              onEachFeature: function (feature, lyr) {
+                const center = lyr.getBounds().getCenter();
+                const label = L.marker(center, {
+                  icon: L.divIcon({
+                    className: "kab-label",
+                    html: `<b style=\"color:#222;text-shadow:1px 1px 6px #fff,0 0 2px #000;font-size:18px;\">${nama}</b>`,
+                    iconSize: [120, 24],
+                    iconAnchor: [60, 12],
+                  }),
+                });
+                label.addTo(map);
+              },
+            }).bindPopup(`<b>${nama}</b>`);
+            layer.addTo(pekanbaru);
+          });
+        });
+
+      // ================= ICON MASJID =================
+      // Icon SVG masjid hijau
+      const iconMasjid = L.icon({
+        iconUrl:
+          "data:image/svg+xml;utf8,<svg width='40' height='40' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'><circle cx='32' cy='32' r='30' fill='%23fff' stroke='%2300bfae' stroke-width='4'/><path d='M32 12l-8 8h4v8h8v-8h4l-8-8z' fill='%2300bfae'/><rect x='20' y='28' width='24' height='16' rx='3' fill='%2300bfae'/><rect x='28' y='36' width='8' height='8' rx='2' fill='%23fff'/></svg>",
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -30],
+        className: "icon-masjid",
+      });
+
+      // ================= KML =================
+      function loadKML(file, icon, title) {
+        omnivore
+          .kml(file)
+          .on("ready", function () {
+            this.eachLayer((l) => {
+              l.setIcon(icon);
+              const p = l.feature && l.feature.properties ? l.feature.properties : {};
+              // Tampilkan nama & alamat jika ada, fallback ke '-' jika kosong
+              let nama = p.name || p.Nama || p.nama || "-";
+              let alamat = p.description;
+              l.bindPopup(`
+                <b>${title}</b><br>
+                <b>Nama:</b> ${nama}<br>
+                <b>Alamat:</b> ${alamat}
+              `);
+            });
+          })
+          .addTo(map);
+      }
+
+      loadKML("masjid 1.kml", iconMasjid, "Masjid");
+      loadKML("masjid 2.kml", iconMasjid, "Masjid");
+      loadKML("masjid 3.kml", iconMasjid, "Masjid");
+
+      // ================= LEGENDA (BENAR & BERFUNGSI) =================
+      // Hapus kontrol layer default, pakai custom legend
+
+      // Tombol reset: tampilkan layer Pekanbaru
+      document.getElementById("reset-btn").onclick = function () {
+        map.addLayer(pekanbaru);
+        document.querySelectorAll("#custom-legend .legend-item").forEach(function (el) {
+          el.classList.remove("legend-off");
+        });
+      };
+
+      // Legend interaktif: klik nama kota untuk show/hide layer
+      document.querySelectorAll("#custom-legend .legend-item").forEach(function (el) {
+        el.style.cursor = "pointer";
+        el.onclick = function () {
+          const layerName = el.getAttribute("data-layer");
+          let layerObj = null;
+          if (layerName === "pekanbaru") layerObj = pekanbaru;
+          if (!layerObj) return;
+          if (map.hasLayer(layerObj)) {
+            map.removeLayer(layerObj);
+            el.classList.add("legend-off");
+          } else {
+            map.addLayer(layerObj);
+            el.classList.remove("legend-off");
+          }
+        };
+      });
+
+      // Style legend-off
+      const style = document.createElement("style");
+      style.innerHTML = `.legend-off { opacity: 0.5; text-decoration: line-through; }`;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>

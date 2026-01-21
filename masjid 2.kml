@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder id="results">
+	<name>masjid</name>
+	<Placemark id="1.2.1">
+		<name>Masjid al-Jami&apos;ah UIN SUSKA</name>
+		<address>GC5Q+W22, Jl. Balam Ujung, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</address>
+		<phoneNumber>+62 812-7554-3424</phoneNumber>
+		<snippet>GC5Q+W22, Jl. Balam Ujung, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</snippet>
+		<description>GC5Q+W22, Jl. Balam Ujung, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</description>
+		<styleUrl>#listing_A</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5aeac6619e413:0x8b1e153d9cee2b0d&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.4375028,0.509761,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.3.1">
+		<name>Masjid Agung Ar-Rahman</name>
+		<address>Jl. Jend. Sudirman No.482, Jadirejo, Kec. Sukajadi, Kota Pekanbaru, Riau 28121, Indonesia</address>
+		<snippet>Jl. Jend. Sudirman No.482, Jadirejo, Kec. Sukajadi, Kota Pekanbaru, Riau 28121, Indonesia</snippet>
+		<description>Jl. Jend. Sudirman No.482, Jadirejo, Kec. Sukajadi, Kota Pekanbaru, Riau 28121, Indonesia</description>
+		<styleUrl>#listing_B</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5aea68471d3eb:0xa9e8b59d27ef6a61&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.4485159,0.5110519,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.4.1">
+		<name>Masjid Al-Falah Darul Muttaqin</name>
+		<address>Jl. Sumatera, Simpang Empat, Kec. Pekanbaru Kota, Kota Pekanbaru, Riau 28121, Indonesia</address>
+		<snippet>Jl. Sumatera, Simpang Empat, Kec. Pekanbaru Kota, Kota Pekanbaru, Riau 28121, Indonesia</snippet>
+		<description>Jl. Sumatera, Simpang Empat, Kec. Pekanbaru Kota, Kota Pekanbaru, Riau 28121, Indonesia</description>
+		<styleUrl>#listing_C</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5aea76cadf007:0x4e4a2a0c5e3f5f3e&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.4490487,0.5141142,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.5.1">
+		<name>Masjid TASYAKKUR</name>
+		<address>GC5W+824, Jl. Duku, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28121, Indonesia</address>
+		<phoneNumber>+62 852-6573-4939</phoneNumber>
+		<snippet>GC5W+824, Jl. Duku, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28121, Indonesia</snippet>
+		<description>GC5W+824, Jl. Duku, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28121, Indonesia</description>
+		<styleUrl>#listing_D</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5aeaf81cf0cef:0x1ed7e954b4125b7b&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.445092,0.5082568,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.6.1">
+		<name>Masjid Al-Hidayah Kantor Gubernur Riau</name>
+		<address>GC9W+876, Komplek Kantor Gubernur, Jadirejo, Sukajadi, Pekanbaru City, Riau 28156, Indonesia</address>
+		<snippet>GC9W+876, Komplek Kantor Gubernur, Jadirejo, Sukajadi, Pekanbaru City, Riau 28156, Indonesia</snippet>
+		<description>GC9W+876, Komplek Kantor Gubernur, Jadirejo, Sukajadi, Pekanbaru City, Riau 28156, Indonesia</description>
+		<styleUrl>#listing_E</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5ac1cce742c07:0x66f4d6cd2d92fc61&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.4456263,0.5182,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.7.1">
+		<name>Masjid Al-Mubin</name>
+		<address>Jl. Paus No.2, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28122, Indonesia</address>
+		<snippet>Jl. Paus No.2, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28122, Indonesia</snippet>
+		<description>Jl. Paus No.2, Wonorejo, Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28122, Indonesia</description>
+		<styleUrl>#listing_F</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5aeb271ba509d:0xa76b862474653219&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.4379031,0.5056328999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.8.1">
+		<name>Masjid Ar-Raudhah</name>
+		<address>Jl. Kuau No.3, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</address>
+		<snippet>Jl. Kuau No.3, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</snippet>
+		<description>Jl. Kuau No.3, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</description>
+		<styleUrl>#listing_G</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5afa14a473f5b:0x60afcdf93d64b71e&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.4385649,0.5075113999999999,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.9.1">
+		<name>Masjid Al-Karomah</name>
+		<address>GC9W+42J, Jl. Cut Nyak Dhien, Jadirejo, Kec. Sukajadi, Kota Pekanbaru, Riau 28156, Indonesia</address>
+		<snippet>GC9W+42J, Jl. Cut Nyak Dhien, Jadirejo, Kec. Sukajadi, Kota Pekanbaru, Riau 28156, Indonesia</snippet>
+		<description>GC9W+42J, Jl. Cut Nyak Dhien, Jadirejo, Kec. Sukajadi, Kota Pekanbaru, Riau 28156, Indonesia</description>
+		<styleUrl>#listing_H</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5ac032b0ad381:0x48b6dc4ac772369a&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.4450343,0.5178404,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.10.1">
+		<name>Masjid Al-Falah II</name>
+		<address>Jl. Murai No.23, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</address>
+		<snippet>Jl. Murai No.23, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</snippet>
+		<description>Jl. Murai No.23, Kp. Melayu, Kec. Sukajadi, Kota Pekanbaru, Riau 28122, Indonesia</description>
+		<styleUrl>#listing_I</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5aeac4fa8b945:0xbf6a247c4969ae90&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.435624,0.5077359,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="1.11.1">
+		<name>Masjid Al-Ikhlas, Sukajadi</name>
+		<address>Jl. KH. Ahmad Dahlan No.36, Sukajadi, Kec. Sukajadi, Kota Pekanbaru, Riau 28156, Indonesia</address>
+		<snippet>Jl. KH. Ahmad Dahlan No.36, Sukajadi, Kec. Sukajadi, Kota Pekanbaru, Riau 28156, Indonesia</snippet>
+		<description>Jl. KH. Ahmad Dahlan No.36, Sukajadi, Kec. Sukajadi, Kota Pekanbaru, Riau 28156, Indonesia</description>
+		<styleUrl>#listing_J</styleUrl>
+		<ExtendedData>
+			<Data name="placepageUri">
+				<value>https://www.google.com/earth/rpc/entity?lat=0.5147562&amp;lng=101.44180415000001&amp;fid=0x31d5ac06bb23a28f:0x7ced8cae9cb23207&amp;hl=en&amp;gl=us&amp;client=earth-client&amp;cv=7.3.6.10441&amp;useragent=GoogleEarth/7.3.6.10441(Windows;Microsoft Windows (6.2.9200.0);en;kml:2.2;client:Pro;type:default)</value>
+			</Data>
+		</ExtendedData>
+		<Point>
+			<coordinates>101.4387994,0.5209646,0</coordinates>
+		</Point>
+	</Placemark>
+	<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.6.10441"></atom:link>
+</Folder>
+</kml>
